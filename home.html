@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-BookStore</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+</head>
+<body class="content-wrapper">
+    <!-- navbar -->
+    <nav>
+    <h1 id="msg"></h1>
+    <button  onclick="logout()" class="logout btn btn-danger">Logout</button>
+    </nav> 
+<div class="row">
+  <div class="col-4" width="100% pt-5">
+    <img width="100%"   src="https://classroomclipart.com/image/static7/preview2/one-open-book-with-plant-design-elements-55799.jpg" class="mt-5">
+  </div>
+  <div class="col-4 ">
+    <!-- modal start -->
+    <div class="row">
+    <button style="float: right; margin-top: 30px;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><span style="font-size: 22px; font-weight: 600;">+</span> Add new books</button>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add new book</h5>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="title" class="col-form-label">Book title:</label>
+                <input  type="text" class="form-control" id="title">
+              </div>
+              <div class="mb-3">
+                <label for="author" class="col-form-label">Author:</label>
+                <input type="text" class="form-control" id="author">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="col-form-label">Price:</label>
+                <input type="text" class="form-control" id="price">
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="saveBook()" class="btn btn-success" data-bs-dismiss="modal">Add</button>
+           
+          </div>
+        </div>
+      </div>
+    </div></div>
+
+    
+    <!-- modal end -->
+
+
+  <div class="bookdetails mt-5 ">
+                <div class="row " id="books"></div>
+            </div>
+
+  </div>
+  <div class="col-4">
+    <div class="row ">
+      <input id="searchtitle" type="text" class="form-control w-75 ms-5" style=" margin-top: 30px;" placeholder="Search by title"><br>
+      <button class="btn btn-danger w-25 mt-3 ms-5" onclick="searchBook()">Search</button>
+    </div>
+    <div class="bookinfo mt-5 ms-5">
+      <div class="row " id="bookinfo"></div>
+  </div>
+
+  </div>
+</div>
+
+
+
+
+
+    <!-- modal -->
+ 
+   
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
